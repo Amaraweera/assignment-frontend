@@ -7,7 +7,10 @@ const Submitters = ({
 }) => {
     return (
         <Col >
-            <Col className="mt-10">
+            <Col xs={9} className="mt-10">
+                <h4>Submit Tickets</h4>
+            </Col>
+            <Col xs={3} >
                 <Button onClick={closeComponent}>Back</Button>
             </Col>
 

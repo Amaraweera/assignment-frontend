@@ -46,7 +46,7 @@ const Ticket = (props) => {
             <Col xs={3} className="mt-10">
                 <Form>
                     <Form.Group>
-                        <Form.Control onChange={(e) => { setPage(1); setSearchString(e.target.value); }} type="text" placeholder="Search" />
+                        <Form.Control value={searchString} onChange={(e) => { setPage(1); setSearchString(e.target.value); }} type="text" placeholder="Search" />
                     </Form.Group>
                 </Form>
             </Col>

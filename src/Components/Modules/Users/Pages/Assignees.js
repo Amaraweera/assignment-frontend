@@ -7,30 +7,34 @@ const Assignees = ({
 }) => {
     return (
         <Col >
-            <Col className="mt-10">
+            <Col xs={9} className="mt-10">
+                <h4>Assign Tickets</h4>
+            </Col>
+            <Col xs={3} >
                 <Button onClick={closeComponent}>Back</Button>
             </Col>
-
-            <Table className="mt-10" striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>Type</th>
-                        <th>Subject</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        data.length !== 0 && data.map((ticket, key) => (
-                            <tr>
-                                <td>{ticket.type}</td>
-                                <td>{ticket.subject}</td>
-                                <td>{ticket.description}</td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </Table>
+            <Col>
+                <Table className="mt-10" striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Subject</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data.length !== 0 && data.map((ticket, key) => (
+                                <tr>
+                                    <td>{ticket.type}</td>
+                                    <td>{ticket.subject}</td>
+                                    <td>{ticket.description}</td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </Table>
+            </Col>
         </Col>
     );
 }
